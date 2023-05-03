@@ -1,6 +1,101 @@
-# db-capstone-project (Project Walkthrough)
+<h1># db-capstone-project (Project Walkthrough)</h1>
+Welcome, to my repository for the Meta database engineering capstone project. In this read me, I will guide you through a step by setp process of the project, and showcase my skills in data modeling, data analysis, SQL, Python, data clients, and data visualization. The capstone project requirements are spread out in a four week course, where each week we were required to complete a set of tasks in order to build an functioning database system. 
 
-<h1> Exercise 3.1: Set up the Tableau Workspace for data analysis</h1>
+<h1> Week1: Project Set Up</h1>
+
+<h2> Exercise: Set up the MySQL instance server in MySQL Workbench </h2>
+Scenario 
+Little Lemon needs to build a robust relational database system in MySQL to store large amounts of data which they can also easily manage and locate as required. Little Lemon have decided to use MySQL Workbench to develop their new database system. They need you to help them set up their MySQL environment to prepare for the design and development of their database. 
+<h3> Task 1</h3>
+Creating a new user is the most secure way to connect to your MySQL database. In this first task, you need to use MySQL Workbench to create a new user account. 
+
+Here is some guidance for completing this task:
+
+Log in to the MySQL Server using the root user.
+
+Select Administration tab from the Navigator section.
+
+Select Add account. 
+
+Provide a meaningful username and a strong password.
+
+Grant the new user the right to perform all tasks. 
+
+
+<h3>Task 2</h3>
+To prepare for building and managing your database, you need to be connected to a MySQL server. In this task you need to create a new MySQL connection. 
+
+Here is some guidance for completing this task:
+
+In the MySQL Workbench home screen, select MySQL connection tab. 
+
+Select the plus icon to open the Setup New Connection form. 
+
+Fill in the form to create a new server instance. 
+
+Click the Test Connection button to check that the settings work as required. 
+
+Once you have completed this task, you can use this connection to begin working with database schemas and SQL queries.
+
+![image](https://user-images.githubusercontent.com/98139941/236061321-9fc2ba20-79f2-426d-8780-92ccb6d952b8.png)
+
+
+
+<h2> Exercise: Create an ER diagram data model and implement it in MySQL </h2>
+Little Lemon needs to build a robust relational database system in MySQL in which they can store large amounts of data. They then need to easily manage and find this data as required. This database system should maintain information about the following aspects of the business:  
+
+Bookings.
+
+Orders.
+
+Order delivery status.
+
+Menu.
+
+Customer details.
+
+and Staff information.
+
+<h3> Task 1: ER Diagram <h3>
+In this task, I created a normalized ER diagram (that adheres to 1NF, 2NF and 3NF) with relevant relationships to meet the data requirements of Little Lemon. I include the following tables:
+
+Bookings: To store information about booked tables in the restaurant including booking id, date and table number.
+
+Orders: To store information about each order such as order date, quantity and total cost.
+
+Order delivery status: To store information about the delivery status of each order such as delivery date and status.
+
+Menu: To store information about cuisines, starters, courses, drinks and desserts.
+
+Customer details: To store information about the customer names and contact details.
+
+Staff information: Including role and salary.
+
+Steps for completing this task:
+
+1.) Identify entities and related attributes. 
+
+2.) Identify primary and foreign keys.
+
+3.) Define data types and constraints. 
+
+In order to follow the 3 normal forms, I added a delivery address, and staff address table to seperate contact details, I also made two different tables for menus and menu items table, and connected the staff table to customers table.
+![Week1-LittleLemonDM](https://user-images.githubusercontent.com/98139941/236060780-94161543-a3f9-4da3-b6cc-5ada2f51be18.png)
+
+<h3> Task2: Forward Engineer </h3>
+
+
+
+<h3> Task 3 </h3>
+In the third and final task, you need to show the databases in the MySQL server. Write a SQL code inside MySQL Workbench SQL editor to show all your databases in MySQL server. Check if the Little Lemon database is included in the list.
+
+![image](https://user-images.githubusercontent.com/98139941/236062762-d50000c9-6853-4674-a6a3-cdd5259aa461.png)
+
+
+
+
+
+<h2> Exercise 3.1: Set up the Tableau Workspace for data analysis</h2>
 <h3>Scenario </h3>
 Little Lemon have an Excel sheet file with thousands of records of data on orders made between 2019 and 2023. They want to analyze the sales data to examine how they can increase their profits. They need you to help them to prepare the existing data before they start analyzing it.   
 
@@ -17,7 +112,7 @@ Steps for completing this task:
 <br>![image](https://user-images.githubusercontent.com/98139941/235809053-38c828e5-0c73-43fa-a323-b9d6a5d069d0.png)</br>
 
 
-<h2> Task 2: Splitting Column </h2>
+<h3> Task 2: Splitting Column </h3>
 In the second task, you need to create two new data fields called First Name and Last Name. Related values should be extracted from the Full Name field.
 
 To complete this task:
