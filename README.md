@@ -3,6 +3,7 @@ Welcome, to my repository for the Meta database engineering capstone project. In
 
 <h1> Week1: Project Set Up</h1>
 
+
 <h2> Exercise: Set up the MySQL instance server in MySQL Workbench </h2>
 Scenario 
 Little Lemon needs to build a robust relational database system in MySQL to store large amounts of data which they can also easily manage and locate as required. Little Lemon have decided to use MySQL Workbench to develop their new database system. They need you to help them set up their MySQL environment to prepare for the design and development of their database. 
@@ -83,6 +84,9 @@ In order to follow the 3 normal forms, I added a delivery address, and staff add
 ![Week1-LittleLemonDM](https://user-images.githubusercontent.com/98139941/236060780-94161543-a3f9-4da3-b6cc-5ada2f51be18.png)
 
 <h3> Task2: Forward Engineer </h3>
+ 
+
+ 
 
 
 
@@ -169,7 +173,8 @@ If you roll over a bar, the customer names and sale figures should be displayed 
 
 View Customer Sales bar chart:
 https://public.tableau.com/app/profile/jon6122/viz/CustomerSalesBarChart-LittleLemon/CustomerSales?publish=yes
-![image](https://user-images.githubusercontent.com/98139941/235823006-e85da419-0ec5-4d99-b432-b0928c9de3fd.png)
+![image]
+(https://user-images.githubusercontent.com/98139941/235823006-e85da419-0ec5-4d99-b432-b0928c9de3fd.png)
 
 <h2>Task 2: Line Chart </h2>
 In the second task, you need to create a line chart to show the sales trend from 2019 to 2022. 
@@ -236,6 +241,7 @@ In this final task, you need to create an interactive dashboard that combines th
 
 View Customer Sales Dashboard:
 https://public.tableau.com/app/profile/jon6122/viz/CustomerSalesDashBoard-LittleLemon/CustomerSalesDashBoard
+
 Conclusion
 By completing the above tasks, you have helped Little Lemon in understand their data, evaluate their sales and understand which customers they should take care of more.
 
