@@ -1,14 +1,15 @@
 <h1># db-capstone-project (Project Walkthrough)</h1>
-Welcome, to my repository for the Meta database engineering capstone project. In this read me, I will guide you through a step by step process of the project, and showcase my skills in data modeling, data analysis, SQL, Python, data clients, and data visualization. The capstone project requirements are spread out in a four week course, where each week we were required to complete a set of tasks in order to build an functioning database system. 
+Welcome, to my repository for the Meta database engineering capstone project. In this read me, I will guide you through a step by step process of the project, and showcase my skills in data modeling, data analysis, SQL, Python, data clients, and data visualization. The capstone project requirements are spread out in a four week course, where each week we were required to complete a set of tasks in order to build an functioning relational database system. 
 
-<h1> Week1: Project Set Up</h1>
+<h1> Week 1: Project Set Up</h1>
 This module provides practical hands on experience with using MySQL. Set up a MySQL instance server in MySQL Workbench, then create an ER Diagram data model and implement it in MySQL.
-<h3><b>Learning Objectives<h2></3>
- <p> Seting up MySQL instance server in MySQL Workbench and create an ER diagram data model and implement it in MySQL. Also Setting up a Git Repository</p>
-<h2> Exercise: Set up the MySQL instance server in MySQL Workbench </h2>
+
+<br><b> Objectives:</b>
+Seting up MySQL instance server in MySQL Workbench and create an ER diagram data model and implement it in MySQL and Git Repository. 
+<h2> Exercise 1.1: Set up the MySQL instance server in MySQL Workbench </h2>
 Scenario 
 Little Lemon needs to build a robust relational database system in MySQL to store large amounts of data which they can also easily manage and locate as required. Little Lemon have decided to use MySQL Workbench to develop their new database system. They need you to help them set up their MySQL environment to prepare for the design and development of their database. 
-<h3> Task 1</h3>
+<h3> Task 1: </h3>
 Creating a new user is the most secure way to connect to your MySQL database. In this first task, you need to use MySQL Workbench to create a new user account. 
 
 Here is some guidance for completing this task:
@@ -45,7 +46,7 @@ Solution
 
 
 
-<h2> Exercise: Create an ER diagram data model and implement it in MySQL </h2>
+<h2> Exercise 1.2: Create an ER diagram data model and implement it in MySQL </h2>
 
 Little Lemon needs to build a robust relational database system in MySQL in which they can store large amounts of data. They then need to easily manage and find this data as required. This database system should maintain information about the following aspects of the business:  
 
@@ -61,7 +62,7 @@ Customer details.
 
 and Staff information.
 
-<h3> Task 1: ER Diagram <h3>
+<h3> Task 1: ER Diagram </h3>
 In this task, I created a normalized ER diagram (that adheres to 1NF, 2NF and 3NF) with relevant relationships to meet the data requirements of Little Lemon. I include the following tables:
 
 Bookings: To store information about booked tables in the restaurant including booking id, date and table number.
@@ -85,8 +86,9 @@ Steps for completing this task:
 3.) Define data types and constraints. 
 
 In order to follow the 3 normal forms, I added a delivery address, and staff address table to seperate contact details, I also made two different tables for menus and menu items table, and connected the staff table to customers table.
- <h4> My Solution:</h4>
-![Week1-LittleLemonDM](https://user-images.githubusercontent.com/98139941/236060780-94161543-a3f9-4da3-b6cc-5ada2f51be18.png)
+<h4> My Solution:</h4>
+
+![Week1-LittleLemonDM](https://github.com/J272881/db-capstone-project/assets/98139941/5f97052e-91a7-418a-8418-bd4d95faf360)
 
 <h3> Task2: Forward Engineer </h3>
  In this second task, I implemented the Little Lemon data model inside my MySQL server. What I did in completing this task:
@@ -112,7 +114,7 @@ In the third and final task, you need to show the databases in the MySQL server.
  I used different sources of data, from data generators, from data points used in previous smaller projects done in this course in order populate the tables. I populated the tables such as the menu items with greek, turkish, and italian food.
  ![image](https://github.com/J272881/db-capstone-project/assets/98139941/9ae50bf3-d45d-4e00-984c-044baeccfea7)
  
- <h1> Week 2: Database Queries and prepared statements</h1>
+ <h1> Week 2: Database Queries, Procedures and Prepared statements</h1>
  
 Use SQL to create virtual tables, stored procedures and prepared statements for Little Lemon restaurant.
  <h3><b>Main Objectives</b><h3>
@@ -164,10 +166,87 @@ I connected the customers, booking, orders, menus, and menu items table to get t
 
 
 ![Week2- InnerJoin](https://github.com/J272881/db-capstone-project/assets/98139941/f59cbca6-78be-4967-9a18-3c6a9b10e0af)
+	
+	
+	<h3> Task 3: Subquery</h3>
+For the third and final task, Little Lemon need you to find all menu items for which more than 2 orders have been placed. You can carry out this task by creating a subquery that lists the menu names from the menus table for any order quantity with more than 2.
 
+Here’s some guidance around completing this task: 
+
+Use the ANY operator in a subquery
+
+The outer query should be used to select the menu name from the menus table.
+
+The inner query should check if any item quantity in the order table is more than 2. 
+
+ Solution:
+	
+![Week2- Subquery](https://github.com/J272881/db-capstone-project/assets/98139941/ac2f46e4-11c4-4c17-9fd1-ca32b0bdcc8a)
+	
+	
+	<h2> Exercise 2.2: Create optimized queries to manage and analyze data </h2>
+Scenario 
+Little Lemon need to query the data in their database. To do this, they need your help with creating optimized queries using stored procedures and prepared statements.
+
+Prerequisites
+In the previous module, you developed a data model for Little Lemon and implemented it in your MySQL server. Your database should now contain several tables including the following:
+
+Menus, 
+
+Orders, 
+bookings,
+
+MenuItems,
+
+and Customers.
+	![image](https://github.com/J272881/db-capstone-project/assets/98139941/57b76ea5-8276-4308-a029-f0bd5504c994)
+
+<h3>	Task 1: GetMaxQuantity </h3>
+In this first task, Little Lemon need you to create a procedure that displays the maximum ordered quantity in the Orders table. 
+
+Creating this procedure will allow Little Lemon to reuse the logic implemented in the procedure easily without retyping the same code over again and again to check the maximum quantity. 
+Solution:
+
+	![Week2- GetMaxQuantity](https://github.com/J272881/db-capstone-project/assets/98139941/534ccaef-97ea-438e-a650-6bbe517bb092)
+	<h3>	Task 2: GetOrderDetail </h3>
+In the second task, Little Lemon need you to help them to create a prepared statement called GetOrderDetail. This prepared statement will help to reduce the parsing time of queries. It will also help to secure the database from SQL injections.
+
+The prepared statement should accept one input argument, the CustomerID value, from a variable. 
+
+The statement should return the order id, the quantity and the order cost from the Orders table. 
+
+Once you create the prepared statement, you can create a variable called id and assign it value of 1. 
+	
+	![Week2- GetOrderDetail](https://github.com/J272881/db-capstone-project/assets/98139941/043fa099-0ac9-4572-93da-f92696abbf26)
+	
+	<h3>	Task 3: Cancel Order </h3>
+Your third and final task is to create a stored procedure called CancelOrder. Little Lemon want to use this stored procedure to delete an order record based on the user input of the order id.
+
+Creating this procedure will allow Little Lemon to cancel any order by specifying the order id value in the procedure parameter without typing the entire SQL delete statement. 
+	
+Solution:
+	
+![Week2- CancelOrder](https://github.com/J272881/db-capstone-project/assets/98139941/67e1ec6f-d1da-46d7-8204-fc1e955c9c08)
+
+	<h2>Exercise 2.3: Create SQL queries to check available bookings based on user input </h2>
+Scenario 
+Little Lemon’s data model must include a Bookings table so that they can store data for table bookings. They also need a stored procedure that checks available bookings based on user input, and a MySQL transaction that can be used to cancel bookings. Use your knowledge of MySQL to help them out.
+
+
+Prerequisites
+You should have created the Little Lemon database in an earlier module. This database should contain a basic Bookings table linked to a Customers table as illustrated below. Your tables can differ slightly from those provided in the example once the required relationship exists between the two.
+
+ <h3> Task 1: Insert Statement </h3>
+Little Lemon wants to populate the Bookings table of their database with some records of data. Your first task is to replicate the list of records in the following table by adding them to the Little Lemon booking table. 
+
+You can use simple INSERT statements to complete this task.
+ 
+	![image](https://github.com/J272881/db-capstone-project/assets/98139941/7212a490-9638-484e-a183-319146a90453)
+
+ <b> My Solution: </b>
  
  
-
+ 
 
 
 <h2> Exercise 3.1: Set up the Tableau Workspace for data analysis</h2>
@@ -217,11 +296,11 @@ My Sales and Profit tables:
 ![image](https://user-images.githubusercontent.com/98139941/235811635-a7bb00b2-f886-4de7-bf81-e0181d19b5c9.png)
 
 Conclusion
-You have now prepared Little Lemon’s data in Tableau. You can now begin analyzing it and providing relevant visualized charts.
+I have now prepared Little Lemon’s data in Tableau. I can now begin analyzing it and providing relevant visualized charts.
 
 <h1>Exercise: Create interactive dashboard for sales and profits </h1>
 <b> Scenario </b>
-In the previous exercise, you prepared Little Lemon’s data to perform data analytics. Little Lemon now need you to filter the data, analyze it and create visual charts in the form of an interactive dashboard to help them understand their business performance, so they can increase their sales and profits.
+In the previous exercise, I prepared Little Lemon’s data to perform data analytics. Little Lemon now need you to filter the data, analyze it and create visual charts in the form of an interactive dashboard to help them understand their business performance, so they can increase their sales and profits.
 
 Task instructions
 Complete the following tasks to help Little Lemon create interactive dashboards to display their sales and profits.
