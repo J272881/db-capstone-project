@@ -104,7 +104,7 @@ Export the LittleLemonDB as a single contained SQL file and save it in the db-ca
 
  
 
-<h3> Task 3 </h3>
+<h3> Task 3: Present Schemas in Database</h3>
 In the third and final task, you need to show the databases in the MySQL server. Write a SQL code inside MySQL Workbench SQL editor to show all your databases in MySQL server. Check if the Little Lemon database is included in the list.
 
 ![image](https://user-images.githubusercontent.com/98139941/236062762-d50000c9-6853-4674-a6a3-cdd5259aa461.png)
@@ -117,12 +117,12 @@ In the third and final task, you need to show the databases in the MySQL server.
  <h1> Week 2: Database Queries, Procedures and Prepared statements</h1>
  
 Use SQL to create virtual tables, stored procedures and prepared statements for Little Lemon restaurant.
- <h3><b>Main Objectives</b><h3>
-- Implement transaction procedures to manage table bookings for the Little Lemon restaurant.
-- Create SQL stored procedures to query the database and generate sales reports.
+ <h3><b>Main Objectives</b></h3>
+<br>-Implement transaction procedures to manage table bookings for the Little Lemon restaurant.</br>
+<br>-Create SQL stored procedures to query the database and generate sales reports.</br>
+
 <h2> Exercise 2.1: Create a virtual table to summarize data </h2>
  
-
 Scenario
 Little Lemon needs to retrieve data from their database. You can use your knowledge of MySQL to help them. As part of this task, you need to:
 
@@ -168,7 +168,8 @@ I connected the customers, booking, orders, menus, and menu items table to get t
 ![Week2- InnerJoin](https://github.com/J272881/db-capstone-project/assets/98139941/f59cbca6-78be-4967-9a18-3c6a9b10e0af)
 	
 	
-	<h3> Task 3: Subquery</h3>
+<h3> Task 3: Subquery</h3>
+
 For the third and final task, Little Lemon need you to find all menu items for which more than 2 orders have been placed. You can carry out this task by creating a subquery that lists the menu names from the menus table for any order quantity with more than 2.
 
 Here’s some guidance around completing this task: 
@@ -184,7 +185,7 @@ The inner query should check if any item quantity in the order table is more tha
 ![Week2- Subquery](https://github.com/J272881/db-capstone-project/assets/98139941/ac2f46e4-11c4-4c17-9fd1-ca32b0bdcc8a)
 	
 	
-	<h2> Exercise 2.2: Create optimized queries to manage and analyze data </h2>
+<h2> Exercise 2.2: Create optimized queries to manage and analyze data </h2>
 Scenario 
 Little Lemon need to query the data in their database. To do this, they need your help with creating optimized queries using stored procedures and prepared statements.
 
@@ -199,7 +200,7 @@ bookings,
 MenuItems,
 
 and Customers.
-	![image](https://github.com/J272881/db-capstone-project/assets/98139941/57b76ea5-8276-4308-a029-f0bd5504c994)
+![image](https://github.com/J272881/db-capstone-project/assets/98139941/57b76ea5-8276-4308-a029-f0bd5504c994)
 
 <h3>	Task 1: GetMaxQuantity </h3>
 In this first task, Little Lemon need you to create a procedure that displays the maximum ordered quantity in the Orders table. 
@@ -207,8 +208,9 @@ In this first task, Little Lemon need you to create a procedure that displays th
 Creating this procedure will allow Little Lemon to reuse the logic implemented in the procedure easily without retyping the same code over again and again to check the maximum quantity. 
 Solution:
 
-	![Week2- GetMaxQuantity](https://github.com/J272881/db-capstone-project/assets/98139941/534ccaef-97ea-438e-a650-6bbe517bb092)
-	<h3>	Task 2: GetOrderDetail </h3>
+![Week2- GetMaxQuantity](https://github.com/J272881/db-capstone-project/assets/98139941/534ccaef-97ea-438e-a650-6bbe517bb092)
+
+<h3>	Task 2: GetOrderDetail </h3>
 In the second task, Little Lemon need you to help them to create a prepared statement called GetOrderDetail. This prepared statement will help to reduce the parsing time of queries. It will also help to secure the database from SQL injections.
 
 The prepared statement should accept one input argument, the CustomerID value, from a variable. 
@@ -217,9 +219,10 @@ The statement should return the order id, the quantity and the order cost from t
 
 Once you create the prepared statement, you can create a variable called id and assign it value of 1. 
 	
-	![Week2- GetOrderDetail](https://github.com/J272881/db-capstone-project/assets/98139941/043fa099-0ac9-4572-93da-f92696abbf26)
+![Week2- GetOrderDetail](https://github.com/J272881/db-capstone-project/assets/98139941/043fa099-0ac9-4572-93da-f92696abbf26)
 	
-	<h3>	Task 3: Cancel Order </h3>
+<h3> Task 3: Cancel Order </h3>
+
 Your third and final task is to create a stored procedure called CancelOrder. Little Lemon want to use this stored procedure to delete an order record based on the user input of the order id.
 
 Creating this procedure will allow Little Lemon to cancel any order by specifying the order id value in the procedure parameter without typing the entire SQL delete statement. 
@@ -228,7 +231,7 @@ Solution:
 	
 ![Week2- CancelOrder](https://github.com/J272881/db-capstone-project/assets/98139941/67e1ec6f-d1da-46d7-8204-fc1e955c9c08)
 
-	<h2>Exercise 2.3: Create SQL queries to check available bookings based on user input </h2>
+<h2>Exercise 2.3: Create SQL queries to check available bookings based on user input </h2>
 Scenario 
 Little Lemon’s data model must include a Bookings table so that they can store data for table bookings. They also need a stored procedure that checks available bookings based on user input, and a MySQL transaction that can be used to cancel bookings. Use your knowledge of MySQL to help them out.
 
@@ -240,14 +243,80 @@ You should have created the Little Lemon database in an earlier module. This dat
 Little Lemon wants to populate the Bookings table of their database with some records of data. Your first task is to replicate the list of records in the following table by adding them to the Little Lemon booking table. 
 
 You can use simple INSERT statements to complete this task.
- 
-	![image](https://github.com/J272881/db-capstone-project/assets/98139941/7212a490-9638-484e-a183-319146a90453)
 
+ 
+![image](https://github.com/J272881/db-capstone-project/assets/98139941/7212a490-9638-484e-a183-319146a90453)
+
+ 
  <b> My Solution: </b>
- 
- 
- 
 
+ <h3> Task 2: CheckBooking </h3>
+For your second task, Little Lemon need you to create a stored procedure called CheckBooking to check whether a table in the restaurant is already booked. Creating this procedure helps to minimize the effort involved in repeatedly coding the same SQL statements.
+
+The procedure should have two input parameters in the form of booking date and table number. You can also create a variable in the procedure to check the status of each table.
+
+<h4><b></b>My Solution:</h4></b>
+ 
+![Week2- CheckBookings](https://github.com/J272881/db-capstone-project/assets/98139941/84e03e1c-1790-43a9-818b-c47123222f89)
+
+<h3>Task 3: AddValidBooking</h3>
+For your third and final task, Little Lemon need to verify a booking, and decline any reservations for tables that are already booked under another name. 
+
+Since integrity is not optional, Little Lemon need to ensure that every booking attempt includes these verification and decline steps. However, implementing these steps requires a stored procedure and a transaction. 
+
+To implement these steps, you need to create a new procedure called AddValidBooking. This procedure must use a transaction statement to perform a rollback if a customer reserves a table that’s already booked under another name.  
+
+Use the following guidelines to complete this task:
+
+The procedure should include two input parameters in the form of booking date and table number.
+
+It also requires at least one variable and should begin with a START TRANSACTION statement.
+
+Your INSERT statement must add a new booking record using the input parameter's values.
+
+Use an IF ELSE statement to check if a table is already booked on the given date. 
+
+If the table is already booked, then rollback the transaction. If the table is available, then commit the transaction. 
+
+<br><b>Solution:</br></b>
+![Week2- AddValidBooking](https://github.com/J272881/db-capstone-project/assets/98139941/4bd80f9f-5155-4561-83a3-b88b50fbd860)
+
+<h2> Exercise 2.3: Create SQL queries to add and update bookings <h2></h2>
+Scenario 
+Little Lemon needs your help with managing their bookings. They need you to create stored procedures that they can invoke as required to add, update and delete bookings in their database.
+
+<h3> Task 1: AddBooking </h3>
+In this first task you need to create a new procedure called AddBooking to add a new table booking record.
+
+The procedure should include four input parameters in the form of the following bookings parameters:
+
+booking id, 
+
+customer id, 
+
+booking date,
+
+and table number.
+
+![Week2- AddBooking](https://github.com/J272881/db-capstone-project/assets/98139941/f76c1e14-929f-4726-961d-392d7e536af2)
+
+<h3> Task 2: UpdateBooking </h3>
+For your second task, Little Lemon need you to create a new procedure called UpdateBooking that they can use to update existing bookings in the booking table.
+
+The procedure should have two input parameters in the form of booking id and booking date. You must also include an UPDATE statement inside the procedure. 
+
+The screenshot below shows my solution of the UpdateBooking procedure in use:
+
+![Week2- UpdateBooking](https://github.com/J272881/db-capstone-project/assets/98139941/5aca5d44-78a6-4903-874c-c9d9ab33fbc8)
+
+<h3> Task 3: Cancel Booking </h3>
+For the third and final task, Little Lemon need you to create a new procedure called CancelBooking that they can use to cancel or remove a booking.
+
+The procedure should have one input parameter in the form of booking id. You must also write a DELETE statement inside the procedure. 
+
+Solution:
+
+![Week2- CancelBooking](https://github.com/J272881/db-capstone-project/assets/98139941/2682f862-1ded-4907-a7de-27db087fd4d4)
 
 <h2> Exercise 3.1: Set up the Tableau Workspace for data analysis</h2>
 <h3>Scenario </h3>
