@@ -298,7 +298,7 @@ My Sales and Profit tables:
 Conclusion
 I have now prepared Little Lemon’s data in Tableau. I can now begin analyzing it and providing relevant visualized charts.
 
-<h1>Exercise: Create interactive dashboard for sales and profits </h1>
+<h1>Exercise 3.2: Create interactive dashboard for sales and profits </h1>
 <b> Scenario </b>
 In the previous exercise, I prepared Little Lemon’s data to perform data analytics. Little Lemon now need you to filter the data, analyze it and create visual charts in the form of an interactive dashboard to help them understand their business performance, so they can increase their sales and profits.
 
@@ -392,6 +392,72 @@ In this final task, you need to create an interactive dashboard that combines th
 View Customer Sales Dashboard:
 https://public.tableau.com/app/profile/jon6122/viz/CustomerSalesDashBoard-LittleLemon/CustomerSalesDashBoard
 
+![Week3- Customer Sales Dashboard](https://github.com/J272881/db-capstone-project/assets/98139941/03837c1f-1ad9-4aa8-a6e0-f178a9f205fa)
+
+
 Conclusion
 By completing the above tasks, you have helped Little Lemon in understand their data, evaluate their sales and understand which customers they should take care of more.
+[Uploading week3-LittleLemonDatabaseClient-db-capstone-project.ipynb…]()
+
+<h2> Exercise 3.3: Add query functions </h2>
+Scenario 
+Little Lemon have started building a functional booking system from which they can manage their customer data. An integral part of a well-functioning system is the ability to query data. Little Lemon need you to help them add the search functionality required to query their data. 
+
+
+Prerequisites
+At this stage of the project, you should have set up the working environment, configured the connector/python and created a database with all the customer information. To implement a booking system, you will first have to review how to make queries on an existing database using Python syntax.
+
+
+<h3> Task One: Connecting to MySQL and Creating a Cursor </h3>
+In the previous exercise you created a Python environment. In the first task of this exercise, you are tasked with extending the environment to connect with your database and interact with the data it holds. 
+
+Your first step is to import the connector module, enter your user details and connect with the database (Hint: you can use an alias when importing the module).
+
+This gives you access to all the functionality available from the connector API, which can be accessed through the variable named connector (or whichever alias you choose). 
+
+The final step is to instantiate an instance of cursor to pass queries and return results.
+
+![image](https://github.com/J272881/db-capstone-project/assets/98139941/a11c84a1-03cf-4217-9806-2febc57182b3)
+<h3> Task 2: Show Tables </h3>
+In this second task, you now need to query the database to show all tables within the database. 
+
+Having established a connection in the first task, you need to execute a test query to ensure that there are no issues. You can do this by executing, or passing, a generic query that returns a snapshot of the database tables. 
+
+You need to execute the query on the cursor using the code that follows. The cursor, as you should recall, is the bridge through which you can pass queries and return results. 
+As before, a variable is used to hold the query. To gain a general insight, the query asks to display all tables within the database. 
+
+The second line calls the cursor execute method. This method takes the Python string and ports it into a viable SQL statement. It then passes it to the database and returns the result. 
+
+To view the results of your query, you can create another variable called results (Hint: the cursor has a method that can return all results in one call). 
+
+![image](https://github.com/J272881/db-capstone-project/assets/98139941/7b1bdab9-8646-493f-80b7-771cd66dd4af)
+
+<h3> Task 3: Query with table JOIN </h3>
+
+For the third and final task, Little Lemon need you to return specific details from your database. They require the full name and contact details for every customer that has placed an order greater than $60 for a promotional campaign. 
+
+You can use the following steps to implement this functionality in your database directory:
+
+
+Step One: Identify which tables are required. To complete the query, you first need to identify which table has the required data. 
+
+The bill paid can be found in Orders as TotalCost and the customer contact information can be found in the Customers table. 
+
+When selecting attributes from a specific table, specify the table name, followed by a dot and the target attribute as below (Hint: select the column attributes that you will need). 
+
+
+Step Two: Next, specify a table (Hint: The FROM keyword allows you to identify a table.)
+
+To join two tables, specify the type of JOIN and the attribute to join the table on. The tables must be joined on an attribute that is common to both tables (such as a common column).
+
+
+Step Three: Finally, include a clause to filter the data on. (Hint: the WHERE clause can be used to add conditional parameters.) 
+
+When you have completed these steps, wrap this query as a string and pass it to the .execute() method of the cursor class. When executed, your SELECT query must extract the full name, contact details and bill amount for every customer who spent more than $60.
+
+
+![image](https://github.com/J272881/db-capstone-project/assets/98139941/38eb2065-a012-439f-9d67-0c81083a5060)
+
+
+
 
